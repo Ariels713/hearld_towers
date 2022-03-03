@@ -1,18 +1,15 @@
 import { Fragment, useState } from "react"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
-// import {
-//   MenuIcon,
-//   SearchIcon,
-//   ShoppingBagIcon,
-//   UserIcon,
-//   XIcon,
-// } from "@heroicons/react/outline"
+import Image from "next/image"
+import hearldLogo from "../../public/assets/hearldLogo.svg"
+import MenuIcon from "./MenuIcon"
+import XIcon from "./XIcon"
 
 const navigation = {
   categories: [
     {
-      id: "women",
-      name: "Women",
+      id: "amenities",
+      name: "Amenities",
       featured: [
         {
           name: "New Arrivals",
@@ -42,14 +39,66 @@ const navigation = {
       sections: [
         [
           {
+            id: "Social-Room",
+            name: "Social Rooms",
+            items: [
+              { name: "Jackie's Club", href: "#" },
+              { name: "Library Lounge", href: "#" },
+            ],
+          },
+          {
+            id: "coffee-bar",
+            name: "Sips & Bites",
+            items: [{ name: "Sugar-Ray Cafe", href: "#" }],
+          },
+        ],
+        [
+          {
+            id: "entertainment",
+            name: "Entertainment",
+            items: [{ name: "The Game Room", href: "#" }],
+          },
+        ],
+      ],
+    },
+    {
+      id: "residences",
+      name: "Residences",
+      featured: [
+        {
+          name: "Accessories",
+          href: "#",
+          imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg",
+          imageAlt:
+            "Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters.",
+        },
+        {
+          name: "New Arrivals",
+          href: "#",
+          imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
+          imageAlt:
+            "Drawstring top with elastic loop closure and textured interior padding.",
+        },
+        {
+          name: "Artwork Tees",
+          href: "#",
+          imageSrc:
+            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
+          imageAlt:
+            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
+        },
+      ],
+      sections: [
+        [
+          {
             id: "shoes",
             name: "Shoes & Accessories",
             items: [
               { name: "Sneakers", href: "#" },
               { name: "Boots", href: "#" },
-              { name: "Flats", href: "#" },
               { name: "Sandals", href: "#" },
-              { name: "Heels", href: "#" },
               { name: "Socks", href: "#" },
             ],
           },
@@ -61,7 +110,6 @@ const navigation = {
               { name: "Core", href: "#" },
               { name: "New Arrivals", href: "#" },
               { name: "Sale", href: "#" },
-              { name: "Accessories", href: "#" },
             ],
           },
         ],
@@ -72,10 +120,9 @@ const navigation = {
             items: [
               { name: "Basic Tees", href: "#" },
               { name: "Artwork Tees", href: "#" },
-              { name: "Tops", href: "#" },
-              { name: "Bottoms", href: "#" },
-              { name: "Swimwear", href: "#" },
-              { name: "Underwear", href: "#" },
+              { name: "Pants", href: "#" },
+              { name: "Hoodies", href: "#" },
+              { name: "Swimsuits", href: "#" },
             ],
           },
           {
@@ -96,19 +143,18 @@ const navigation = {
             id: "brands",
             name: "Brands",
             items: [
-              { name: "Full Nelson", href: "#" },
-              { name: "My Way", href: "#" },
               { name: "Re-Arranged", href: "#" },
               { name: "Counterfeit", href: "#" },
-              { name: "Significant Other", href: "#" },
+              { name: "Full Nelson", href: "#" },
+              { name: "My Way", href: "#" },
             ],
           },
         ],
       ],
     },
     {
-      id: "men",
-      name: "Men",
+      id: "residences",
+      name: "Residences",
       featured: [
         {
           name: "Accessories",
@@ -198,10 +244,7 @@ const navigation = {
       ],
     },
   ],
-  pages: [
-    { name: "Company", href: "#" },
-    { name: "Stores", href: "#" },
-  ],
+  pages: [{ name: "Availability", href: "#" }],
 }
 
 function classNames(...classes) {
@@ -249,7 +292,7 @@ export default function Example() {
                   onClick={() => setOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
-                  {/* <XIcon className="h-6 w-6" aria-hidden="true" /> */}
+                  <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
 
@@ -383,9 +426,9 @@ export default function Example() {
       <header className="relative bg-white">
         <nav
           aria-label="Top"
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8"
         >
-          <div className="border-b border-gray-200">
+          <div>
             <div className="h-16 flex items-center justify-between">
               <div className="flex-1 flex items-center lg:hidden">
                 <button
@@ -394,7 +437,7 @@ export default function Example() {
                   onClick={() => setOpen(true)}
                 >
                   <span className="sr-only">Open menu</span>
-                  {/* <MenuIcon className="h-6 w-6" aria-hidden="true" /> */}
+                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
                 <a
@@ -557,59 +600,35 @@ export default function Example() {
 
               {/* Logo */}
               <a href="#" className="flex">
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                  alt=""
+                <span className="sr-only">Hearld Logo</span>
+                <Image
+                  className="h-28 w-auto relative mt-80"
+                  src={hearldLogo}
+                  alt="Heard Building Logo"
+                  width="200px"
+                  height="119px"
                 />
               </a>
 
               <div className="flex-1 flex items-center justify-end">
+                <span className="mr-3 block text-sm font-medium text-gray-800">
+                  Apply
+                </span>
+                <span className="sr-only">Apply</span>
+                <span className="mr-3 block text-sm font-medium text-gray-800">
+                  212-736-5700
+                </span>
+                <span className="sr-only">212-736-5700</span>
+                <button
+                  type="button"
+                  className="hidden items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
+                >
+                  Contact Us
+                </button>
                 <a
                   href="#"
                   className="hidden text-gray-700 hover:text-gray-800 lg:flex lg:items-center"
-                >
-                  <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
-                    alt=""
-                    className="w-5 h-auto block flex-shrink-0"
-                  />
-                  <span className="ml-3 block text-sm font-medium">CAD</span>
-                  <span className="sr-only">, change currency</span>
-                </a>
-
-                {/* Search */}
-                <a
-                  href="#"
-                  className="hidden ml-6 p-2 text-gray-400 hover:text-gray-500 lg:block"
-                >
-                  <span className="sr-only">Search</span>
-                  {/* <SearchIcon className="w-6 h-6" aria-hidden="true" /> */}
-                </a>
-
-                {/* Account */}
-                <a
-                  href="#"
-                  className="p-2 text-gray-400 hover:text-gray-500 lg:ml-4"
-                >
-                  <span className="sr-only">Account</span>
-                  {/* <UserIcon className="w-6 h-6" aria-hidden="true" /> */}
-                </a>
-
-                {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 p-2 flex items-center">
-                    {/* <ShoppingBagIcon
-                      className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    /> */}
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                      0
-                    </span>
-                    <span className="sr-only">items in cart, view bag</span>
-                  </a>
-                </div>
+                ></a>
               </div>
             </div>
           </div>
