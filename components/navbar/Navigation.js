@@ -2,6 +2,7 @@ import { Fragment, useState } from "react"
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react"
 import Image from "next/image"
 import hearldLogo from "../../public/assets/hearldLogo.svg"
+import hearldMenu from "../../public/assets/hearldMenu.jpeg"
 import MenuIcon from "./MenuIcon"
 import XIcon from "./XIcon"
 
@@ -12,29 +13,26 @@ const navigation = {
       name: "Amenities",
       featured: [
         {
-          name: "New Arrivals",
+          name: "Jackies Social Clubs",
           href: "#",
           imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
+            "https://images.pexels.com/photos/276720/pexels-photo-276720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+          imageAlt: "Social Club",
         },
-        {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
-        },
-        {
-          name: "Accessories",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg",
-          imageAlt:
-            "Model wearing minimalist watch with black wristband and white watch face.",
-        },
+        // {
+        //   name: "Sugar-Ray Cafe",
+        //   href: "#",
+        //   imageSrc:
+        //     "https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        //   imageAlt: "Coffee being pourd",
+        // },
+        // {
+        //   name: "Game Room",
+        //   href: "#",
+        //   imageSrc:
+        //     "https://images.pexels.com/photos/6457603/pexels-photo-6457603.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        //   imageAlt: "Two women playing pool",
+        // },
       ],
       sections: [
         [
@@ -61,197 +59,19 @@ const navigation = {
         ],
       ],
     },
-    {
-      id: "residences",
-      name: "Residences",
-      featured: [
-        {
-          name: "Accessories",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg",
-          imageAlt:
-            "Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters.",
-        },
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
-          imageAlt:
-            "Drawstring top with elastic loop closure and textured interior padding.",
-        },
-        {
-          name: "Artwork Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
-          imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
-        },
-      ],
-      sections: [
-        [
-          {
-            id: "shoes",
-            name: "Shoes & Accessories",
-            items: [
-              { name: "Sneakers", href: "#" },
-              { name: "Boots", href: "#" },
-              { name: "Sandals", href: "#" },
-              { name: "Socks", href: "#" },
-            ],
-          },
-          {
-            id: "collection",
-            name: "Shop Collection",
-            items: [
-              { name: "Everything", href: "#" },
-              { name: "Core", href: "#" },
-              { name: "New Arrivals", href: "#" },
-              { name: "Sale", href: "#" },
-            ],
-          },
-        ],
-        [
-          {
-            id: "clothing",
-            name: "All Clothing",
-            items: [
-              { name: "Basic Tees", href: "#" },
-              { name: "Artwork Tees", href: "#" },
-              { name: "Pants", href: "#" },
-              { name: "Hoodies", href: "#" },
-              { name: "Swimsuits", href: "#" },
-            ],
-          },
-          {
-            id: "accessories",
-            name: "All Accessories",
-            items: [
-              { name: "Watches", href: "#" },
-              { name: "Wallets", href: "#" },
-              { name: "Bags", href: "#" },
-              { name: "Sunglasses", href: "#" },
-              { name: "Hats", href: "#" },
-              { name: "Belts", href: "#" },
-            ],
-          },
-        ],
-        [
-          {
-            id: "brands",
-            name: "Brands",
-            items: [
-              { name: "Re-Arranged", href: "#" },
-              { name: "Counterfeit", href: "#" },
-              { name: "Full Nelson", href: "#" },
-              { name: "My Way", href: "#" },
-            ],
-          },
-        ],
-      ],
-    },
-    {
-      id: "residences",
-      name: "Residences",
-      featured: [
-        {
-          name: "Accessories",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg",
-          imageAlt:
-            "Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters.",
-        },
-        {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
-          imageAlt:
-            "Drawstring top with elastic loop closure and textured interior padding.",
-        },
-        {
-          name: "Artwork Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
-          imageAlt:
-            "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
-        },
-      ],
-      sections: [
-        [
-          {
-            id: "shoes",
-            name: "Shoes & Accessories",
-            items: [
-              { name: "Sneakers", href: "#" },
-              { name: "Boots", href: "#" },
-              { name: "Sandals", href: "#" },
-              { name: "Socks", href: "#" },
-            ],
-          },
-          {
-            id: "collection",
-            name: "Shop Collection",
-            items: [
-              { name: "Everything", href: "#" },
-              { name: "Core", href: "#" },
-              { name: "New Arrivals", href: "#" },
-              { name: "Sale", href: "#" },
-            ],
-          },
-        ],
-        [
-          {
-            id: "clothing",
-            name: "All Clothing",
-            items: [
-              { name: "Basic Tees", href: "#" },
-              { name: "Artwork Tees", href: "#" },
-              { name: "Pants", href: "#" },
-              { name: "Hoodies", href: "#" },
-              { name: "Swimsuits", href: "#" },
-            ],
-          },
-          {
-            id: "accessories",
-            name: "All Accessories",
-            items: [
-              { name: "Watches", href: "#" },
-              { name: "Wallets", href: "#" },
-              { name: "Bags", href: "#" },
-              { name: "Sunglasses", href: "#" },
-              { name: "Hats", href: "#" },
-              { name: "Belts", href: "#" },
-            ],
-          },
-        ],
-        [
-          {
-            id: "brands",
-            name: "Brands",
-            items: [
-              { name: "Re-Arranged", href: "#" },
-              { name: "Counterfeit", href: "#" },
-              { name: "Full Nelson", href: "#" },
-              { name: "My Way", href: "#" },
-            ],
-          },
-        ],
-      ],
-    },
   ],
-  pages: [{ name: "Availability", href: "#" }],
+  pages: [
+    { name: "Residences", href: "#" },
+    { name: "Neighborhood", href: "#" },
+    { name: "Availability", href: "#" },
+  ],
 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-export default function Example() {
+export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (
@@ -334,6 +154,7 @@ export default function Example() {
                               alt={item.imageAlt}
                               className="object-center object-cover group-hover:opacity-75"
                             />
+
                             <div className="flex flex-col justify-end">
                               <div className="p-4 bg-white bg-opacity-60 text-base sm:text-sm">
                                 <a
@@ -426,7 +247,7 @@ export default function Example() {
       <header className="relative bg-white">
         <nav
           aria-label="Top"
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8"
         >
           <div>
             <div className="h-16 flex items-center justify-between">
@@ -512,6 +333,7 @@ export default function Example() {
                                               alt={item.imageAlt}
                                               className="object-center object-cover group-hover:opacity-75"
                                             />
+
                                             <div className="flex flex-col justify-end">
                                               <div className="p-4 bg-white bg-opacity-60 text-sm">
                                                 <a
@@ -611,11 +433,17 @@ export default function Example() {
               </a>
 
               <div className="flex-1 flex items-center justify-end">
-                <span className="mr-3 block text-sm font-medium text-gray-800">
-                  Apply
-                </span>
+                <a
+                  href="https://www.on-site.com/form_applications_updt.jsp?goal=6&attr=x20&property_id=90831&lease_id=0&unit_id=0&required="
+                  target="_blank"
+                  className="text-gray-400 hover:text-gray-500 dark:text-gray-300"
+                >
+                  <span className="hidden mr-3 lg:flex text-sm font-medium text-gray-800">
+                    Apply
+                  </span>
+                </a>
                 <span className="sr-only">Apply</span>
-                <span className="mr-3 block text-sm font-medium text-gray-800">
+                <span className="hidden lg:flex mr-3  text-sm font-medium text-gray-800">
                   212-736-5700
                 </span>
                 <span className="sr-only">212-736-5700</span>
