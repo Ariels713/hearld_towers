@@ -436,6 +436,7 @@ export default function Navigation() {
                 <a
                   href="https://www.on-site.com/form_applications_updt.jsp?goal=6&attr=x20&property_id=90831&lease_id=0&unit_id=0&required="
                   target="_blank"
+                  rel="noreferrer"
                   className="text-gray-400 hover:text-gray-500 dark:text-gray-300"
                 >
                   <span className="hidden mr-3 lg:flex text-sm font-medium text-gray-800">
