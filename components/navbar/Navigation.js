@@ -19,20 +19,6 @@ const navigation = {
             "https://images.pexels.com/photos/276720/pexels-photo-276720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
           imageAlt: "Social Club",
         },
-        // {
-        //   name: "Sugar-Ray Cafe",
-        //   href: "#",
-        //   imageSrc:
-        //     "https://images.pexels.com/photos/302902/pexels-photo-302902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        //   imageAlt: "Coffee being pourd",
-        // },
-        // {
-        //   name: "Game Room",
-        //   href: "#",
-        //   imageSrc:
-        //     "https://images.pexels.com/photos/6457603/pexels-photo-6457603.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        //   imageAlt: "Two women playing pool",
-        // },
       ],
       sections: [
         [
@@ -115,7 +101,6 @@ export default function Navigation() {
                   <XIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-
               {/* Links */}
               <Tab.Group as="div" className="mt-2">
                 <div className="border-b border-gray-200">
@@ -126,7 +111,7 @@ export default function Navigation() {
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? "text-indigo-600 border-indigo-600"
+                              ? "text-gray-600 border-gray-600"
                               : "text-gray-900 border-transparent",
                             "flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium"
                           )
@@ -212,7 +197,6 @@ export default function Navigation() {
                   ))}
                 </Tab.Panels>
               </Tab.Group>
-
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
@@ -225,19 +209,28 @@ export default function Navigation() {
                   </div>
                 ))}
               </div>
-
               <div className="border-t border-gray-200 py-6 px-4">
-                <a href="#" className="-m-2 p-2 flex items-center">
-                  <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
-                    alt=""
-                    className="w-5 h-auto block flex-shrink-0"
-                  />
-                  <span className="ml-3 block text-base font-medium text-gray-900">
-                    CAD
+                <a
+                  href="https://www.on-site.com/form_applications_updt.jsp?goal=6&attr=x20&property_id=90831&lease_id=0&unit_id=0&required="
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-400 hover:text-gray-500 dark:text-gray-300"
+                >
+                  <span className="mr-3 lg:flex text-sm font-medium text-gray-800">
+                    Apply
                   </span>
-                  <span className="sr-only">, change currency</span>
                 </a>
+                <span className="sr-only">Apply</span>
+                {/* <span className="block lg:flex mr-3 mb-2 text-sm font-medium text-gray-800">
+                  212-736-5700
+                </span>
+                <span className="sr-only">212-736-5700</span> */}
+                <button
+                  type="button"
+                  className="mt-4 block items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
+                >
+                  Contact Us
+                </button>
               </div>
             </div>
           </Transition.Child>
@@ -281,7 +274,7 @@ export default function Navigation() {
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "text-indigo-600"
+                                  ? "text-gray-600"
                                   : "text-gray-700 hover:text-gray-800",
                                 "relative z-10 flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium"
                               )}
@@ -289,7 +282,7 @@ export default function Navigation() {
                               {category.name}
                               <span
                                 className={classNames(
-                                  open ? "bg-indigo-600" : "",
+                                  open ? "bg-gray-600" : "",
                                   "absolute bottom-0 inset-x-0 h-0.5 transition-colors ease-out duration-200 sm:mt-5 sm:transform sm:translate-y-px"
                                 )}
                                 aria-hidden="true"
@@ -444,20 +437,20 @@ export default function Navigation() {
                   </span>
                 </a>
                 <span className="sr-only">Apply</span>
-                <span className="hidden lg:flex mr-3  text-sm font-medium text-gray-800">
+                {/* <span className="hidden lg:flex mr-3  text-sm font-medium text-gray-800">
                   212-736-5700
                 </span>
-                <span className="sr-only">212-736-5700</span>
+                <span className="sr-only">212-736-5700</span> */}
                 <button
                   type="button"
                   className="hidden items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
                 >
                   Contact Us
                 </button>
-                <a
+                {/* <a
                   href="#"
                   className="hidden text-gray-700 hover:text-gray-800 lg:flex lg:items-center"
-                ></a>
+                ></a> */}
               </div>
             </div>
           </div>
