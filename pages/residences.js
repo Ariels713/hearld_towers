@@ -2,27 +2,28 @@ import React from "react"
 import Image from "next/image"
 import hearld5 from "../public/assets/hearld5.jpg"
 import Link from "next/link"
-
+import MainSection from "../components/mainSection/MainSection"
+import herald12 from "../public/assets/herald12.jpg"
 const collections = [
   {
-    name: "Women's",
+    name: "Beautiful Views",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-04-collection-01.jpg",
+      "https://images.pexels.com/photos/892618/pexels-photo-892618.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     imageAlt: "Woman wearing an off-white cotton t-shirt.",
   },
   {
-    name: "Men's",
+    name: "Modern Amenities",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-04-collection-02.jpg",
+      "https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     imageAlt: "Man wearing a charcoal gray cotton t-shirt.",
   },
   {
-    name: "Desk Accessories",
+    name: "Modern Kitchens",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-04-collection-03.jpg",
+      "https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     imageAlt:
       "Person sitting at a wooden desk with paper note organizer, pencil and tablet.",
   },
@@ -60,6 +61,7 @@ function residences() {
           </Link>
         </div>
       </div>
+      <MainSection />
       <div className="relative bg-white">
         {/* Background image and overlap */}
         <div
@@ -68,8 +70,8 @@ function residences() {
         >
           <div className="flex-1 relative w-full bg-gray-800">
             <div className="absolute inset-0 overflow-hidden">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+              <Image
+                src={herald12}
                 alt=""
                 className="w-full h-full object-center object-cover"
               />
@@ -87,11 +89,11 @@ function residences() {
           >
             <div className="flex-1 relative w-full bg-gray-800">
               <div className="absolute inset-0 overflow-hidden">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-04-hero-full-width.jpg"
+                {/* <Image
+                  src={herald11}
                   alt=""
                   className="w-full h-full object-center object-cover"
-                />
+                /> */}
               </div>
               <div className="absolute inset-0 bg-gray-900 opacity-50" />
             </div>
@@ -99,16 +101,8 @@ function residences() {
           </div>
           <div className="relative py-32">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-              Mid-Season Sale
+              INDULDGE IN OLD SCHOOL, LARGE LIVING.
             </h1>
-            <div className="mt-4 sm:mt-6">
-              <a
-                href="#"
-                className="inline-block bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
-              >
-                Shop Collection
-              </a>
-            </div>
           </div>
         </div>
 
@@ -142,7 +136,7 @@ function residences() {
                   <div className="absolute inset-0 rounded-lg p-6 flex items-end">
                     <div>
                       <p aria-hidden="true" className="text-sm text-white">
-                        Shop the collection
+                        Herald Towers
                       </p>
                       <h3 className="mt-1 font-semibold text-white">
                         <a href={collection.href}>
