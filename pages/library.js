@@ -1,10 +1,4 @@
 import React from "react"
-import Image from "next/image"
-import jackies1 from "../public/assets/jackies/jackies1.jpg"
-import jackies2 from "../public/assets/jackies/jackies2.jpg"
-import jackies3 from "../public/assets/jackies/jackies3.jpg"
-import jackies4 from "../public/assets/jackies/jackies4.jpg"
-
 const faqs = [
   {
     question: "Get comfortable and stay awhile",
@@ -12,8 +6,7 @@ const faqs = [
       "Through ever-unfolding intimate alcoves, and work nooks, the games room and bar lounge on the 25th floor open out onto the grandeur of the Main Room. Under an enormous wagon wheel chandelier, the seductive space invites social reprieve, featuring velvet modular seating, a large flatscreen TV, and lavish space to entertain. ",
   },
 ]
-
-function jackies() {
+function library() {
   return (
     <>
       <div className="relative bg-gray-900">
@@ -33,7 +26,7 @@ function jackies() {
 
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-72 lg:px-0">
           <h1 className="text-4xl font-extrabold tracking-tight text-white lg:text-6xl">
-            A Playground for the Patrons
+            Library Lounge
           </h1>
         </div>
       </div>
@@ -47,11 +40,11 @@ function jackies() {
               Jackie&apos;s Club
             </p>
             <p className="max-w-4xl mt-5 mx-auto text-xl text-gray-500">
-              Through ever-unfolding intimate alcoves, and work nooks, the games
-              room and bar lounge on the 25th floor open out onto the grandeur
-              of the Main Room. Under an enormous wagon wheel chandelier, the
-              seductive space invites social reprieve, featuring velvet modular
-              seating, a large flatscreen TV, and lavish space to entertain.
+              A dedicated work wing features a long study table for optimal
+              focus and group collaborations. With library lamps and outlets at
+              every station, the room is richly decorated with a deep color
+              palette, brass detailing, and brasserie lighting, whispering of
+              late 50s libraries, and yesteryear ad agencies.
             </p>
           </div>
         </div>
@@ -97,7 +90,7 @@ function jackies() {
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900">
-                Jackie&apos;s Social Room
+                Jackie's Social Room
               </h2>
               <p className="mt-4 text-lg text-gray-500">
                 Quick Fact: When Hotel McAlpin opened it was the largest hotel
@@ -125,4 +118,4 @@ function jackies() {
   )
 }
 
-export default jackies
+export default library
