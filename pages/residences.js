@@ -63,7 +63,7 @@ function residences() {
           </Link>
         </div>
       </div>
-      <MainSection />
+      {/* <MainSection /> */}
       <div className="relative bg-white">
         {/* Background image and overlap */}
         <div
