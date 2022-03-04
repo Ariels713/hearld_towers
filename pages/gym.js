@@ -1,5 +1,5 @@
 import React from "react"
-import library1 from "../public/assets/jackies/library1.jpg"
+import gym1 from "../public/assets/jackies/gym1.jpeg"
 import jackies1 from "../public/assets/jackies/jackies1.jpg"
 import jackies2 from "../public/assets/jackies/jackies2.jpg"
 import jackies3 from "../public/assets/jackies/jackies3.jpg"
@@ -12,7 +12,7 @@ const faqs = [
       "Through ever-unfolding intimate alcoves, and work nooks, the games room and bar lounge on the 25th floor open out onto the grandeur of the Main Room. Under an enormous wagon wheel chandelier, the seductive space invites social reprieve, featuring velvet modular seating, a large flatscreen TV, and lavish space to entertain. ",
   },
 ]
-function library() {
+function gym() {
   return (
     <>
       <div className="relative bg-gray-900">
@@ -20,7 +20,7 @@ function library() {
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <Image
             className="w-full h-full object-center object-cover"
-            src={library1}
+            src={gym1}
             alt="Launge Room at Hearld"
             layout="fill"
           />
@@ -32,7 +32,7 @@ function library() {
 
         <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-72 lg:px-0">
           <h1 className="text-4xl font-extrabold tracking-tight text-white lg:text-6xl">
-            Library Lounge
+            The Gym
           </h1>
         </div>
       </div>
@@ -40,17 +40,14 @@ function library() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-base font-semibold text-green-700 tracking-wide uppercase">
-              Social Room
+              Fitness
             </h2>
             <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
-              Library Lounge
+              The Game Room
             </p>
             <p className="max-w-4xl mt-5 mx-auto text-xl text-gray-500">
-              A dedicated work wing features a long study table for optimal
-              focus and group collaborations. With library lamps and outlets at
-              every station, the room is richly decorated with a deep color
-              palette, brass detailing, and brasserie lighting, whispering of
-              late 50s libraries, and yesteryear ad agencies.
+              With no expense spared, Herald Towers offers a fully equipped,
+              newly renovated, top of the line fitness center.
             </p>
           </div>
         </div>
@@ -76,7 +73,7 @@ function library() {
           <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
             <Image
               layout="fill"
-              src={library1}
+              src={gym1}
               alt=""
               className="w-full h-full object-center object-cover"
             />
@@ -95,12 +92,11 @@ function library() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
-              <h2 className="text-3xl font-extrabold text-gray-900">
-                Library Lounge
-              </h2>
+              <h2 className="text-3xl font-extrabold text-gray-900">The Gym</h2>
               <p className="mt-4 text-lg text-gray-500">
-                Quick Fact: When Hotel McAlpin opened it was the largest hotel
-                in the world.
+                Push yourself to the limit with Peloton. Enjoy brand new Peloton
+                bicycles in the gym, and take your fitness levels to new
+                heights.
               </p>
             </div>
             <div className="mt-12 lg:mt-0 lg:col-span-2">
@@ -124,4 +120,4 @@ function library() {
   )
 }
 
-export default library
+export default gym

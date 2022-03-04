@@ -28,7 +28,7 @@ const navigation = {
             name: "Social Rooms",
             items: [
               { name: "Jackie's Club", href: "/jackies" },
-              { name: "Library Lounge", href: "/Library" },
+              { name: "Library Lounge", href: "/library" },
             ],
           },
           {
