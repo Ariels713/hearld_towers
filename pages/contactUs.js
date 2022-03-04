@@ -63,7 +63,7 @@ export default function Example() {
               </div>
               <div>
                 <h3 className="mt-4 text-lg leading-6 font-medium text-gray-900">
-                  Leasingn Office
+                  Leasing Office
                 </h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>

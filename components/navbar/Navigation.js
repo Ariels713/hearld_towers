@@ -27,21 +27,28 @@ const navigation = {
             id: "Social-Room",
             name: "Social Rooms",
             items: [
-              { name: "Jackie's Club", href: "#" },
-              { name: "Library Lounge", href: "#" },
+              { name: "Jackie's Club", href: "/jackies" },
+              { name: "Library Lounge", href: "/Library" },
             ],
           },
           {
             id: "coffee-bar",
             name: "Sips & Bites",
-            items: [{ name: "Sugar-Ray Cafe", href: "#" }],
+            items: [{ name: "Sugar-Ray Cafe", href: "/rays" }],
           },
         ],
         [
           {
             id: "entertainment",
             name: "Entertainment",
-            items: [{ name: "The Game Room", href: "#" }],
+            items: [{ name: "The Game Room", href: "/gaming" }],
+          },
+        ],
+        [
+          {
+            id: "gym",
+            name: "Fitness",
+            items: [{ name: "The Gym", href: "/gym" }],
           },
         ],
       ],
@@ -153,12 +160,6 @@ export default function Navigation() {
                                   />
                                   {item.name}
                                 </a>
-                                <p
-                                  aria-hidden="true"
-                                  className="mt-0.5 text-gray-700 sm:mt-1"
-                                >
-                                  Shop now
-                                </p>
                               </div>
                             </div>
                           </div>
@@ -344,12 +345,6 @@ export default function Navigation() {
                                                   />
                                                   {item.name}
                                                 </a>
-                                                <p
-                                                  aria-hidden="true"
-                                                  className="mt-0.5 text-gray-700 sm:mt-1"
-                                                >
-                                                  Shop now
-                                                </p>
                                               </div>
                                             </div>
                                           </div>
