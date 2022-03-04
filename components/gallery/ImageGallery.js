@@ -9,8 +9,8 @@ import hearld8 from "../../public/assets/hearld8.jpg"
 function ImageGallery() {
   return (
     <>
-      <div class="container mx-auto">
-        <div class="grid-cols-3 p-20 space-y-2 white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+      <div className="container mx-auto">
+        <div className="grid-cols-3 p-20 space-y-2 white lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
           <div className="w-full rounded">
             <Image src={hearld3} alt="Launge Room at Hearld" />
           </div>
