@@ -6,6 +6,7 @@ import MainSection from "../components/mainSection/MainSection"
 import ImageGallery from "../components/gallery/ImageGallery"
 import BodyCopy from "../components/bodyCopy/BodyCopy"
 import SecondaryHero from "../components/hero/SecondaryHero"
+import ClosingHero from "../components/hero/ClosingHero"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <ImageGallery />
       <BodyCopy />
       <SecondaryHero />
+      <ClosingHero />
     </div>
   )
 }
