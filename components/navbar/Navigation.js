@@ -5,6 +5,7 @@ import hearldLogo from "../../public/assets/hearldLogo.svg"
 import hearldMenu from "../../public/assets/hearldMenu.jpeg"
 import MenuIcon from "./MenuIcon"
 import XIcon from "./XIcon"
+import Link from "next/link"
 
 const navigation = {
   categories: [
@@ -49,7 +50,7 @@ const navigation = {
   pages: [
     { name: "Residences", href: "#" },
     { name: "Neighborhood", href: "#" },
-    { name: "Availability", href: "#" },
+    { name: "Availability", href: "/availability" },
   ],
 }
 
@@ -200,12 +201,14 @@ export default function Navigation() {
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
-                    <a
-                      href={page.href}
-                      className="-m-2 p-2 block font-medium text-gray-900"
-                    >
-                      {page.name}
-                    </a>
+                    <Link href={page.href}>
+                      <a
+                        // href={page.href}
+                        className="-m-2 p-2 block font-medium text-gray-900"
+                      >
+                        {page.name}
+                      </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -225,12 +228,14 @@ export default function Navigation() {
                   212-736-5700
                 </span>
                 <span className="sr-only">212-736-5700</span> */}
-                <button
-                  type="button"
-                  className="mt-4 block items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
-                >
-                  Contact Us
-                </button>
+                <Link href="/contactUs">
+                  <a
+                    type="button"
+                    className="mt-4 block items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
+                  >
+                    Contact Us
+                  </a>
+                </Link>
               </div>
             </div>
           </Transition.Child>
@@ -402,28 +407,31 @@ export default function Navigation() {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <a
-                      key={page.name}
-                      href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
-                      {page.name}
-                    </a>
+                    <Link href={page.href}>
+                      <a
+                        key={page.name}
+                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      >
+                        {page.name}
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>
 
               {/* Logo */}
-              <a href="#" className="flex">
-                <span className="sr-only">Hearld Logo</span>
-                <Image
-                  className="h-28 w-auto relative mt-80"
-                  src={hearldLogo}
-                  alt="Heard Building Logo"
-                  width="200px"
-                  height="119px"
-                />
-              </a>
+              <Link href="/">
+                <a className="flex">
+                  <span className="sr-only">Hearld Logo</span>
+                  <Image
+                    className="h-28 w-auto relative mt-80"
+                    src={hearldLogo}
+                    alt="Heard Building Logo"
+                    width="200px"
+                    height="119px"
+                  />
+                </a>
+              </Link>
 
               <div className="flex-1 flex items-center justify-end">
                 <a
@@ -441,12 +449,14 @@ export default function Navigation() {
                   212-736-5700
                 </span>
                 <span className="sr-only">212-736-5700</span> */}
-                <button
-                  type="button"
-                  className="hidden items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
-                >
-                  Contact Us
-                </button>
+                <Link href="/contactUs">
+                  <a
+                    type="button"
+                    className="hidden block items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-200 bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 lg:inline-flex lg:items-center"
+                  >
+                    Contact Us
+                  </a>
+                </Link>
                 {/* <a
                   href="#"
                   className="hidden text-gray-700 hover:text-gray-800 lg:flex lg:items-center"
