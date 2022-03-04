@@ -49,7 +49,7 @@ function rays() {
               Named after Sugar-Ray Leonard who frequented Hotel McAlpin, the
               Sugar-Ray Cafe, on the 25th floor speaks of late art deco
               influence and a high-end classic brasserie. With plush velvet
-              booths, a marble bar, and eclectic lighting, it’s refined,
+              booths, a marble bar, and eclectic lighting, it&apos;s refined,
               characteristic, and utterly gorgeous. The perfect escape for work
               or pleasure, the space features sliding doors that can make it
               exclusively yours.
