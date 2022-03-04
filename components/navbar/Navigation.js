@@ -407,11 +407,8 @@ export default function Navigation() {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <Link href={page.href}>
-                      <a
-                        key={page.name}
-                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                      >
+                    <Link href={page.href} key={page.name}>
+                      <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
                         {page.name}
                       </a>
                     </Link>
