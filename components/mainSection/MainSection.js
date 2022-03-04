@@ -1,13 +1,12 @@
 import React from "react"
 
-function MainSection() {
+function MainSection({ bgColor, textColor }) {
   return (
     <>
-      <div className="bg-gray-200">
+      <div className={bgColor}>
         <div className="max-w-4xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className={`text-3xl font-extrabold ${textColor} sm:text-4xl`}>
             <span className="block">The New Classic</span>
-            <span className="block">Start using Workflow today.</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-800">
             With a tip of the hat to New York style, Herald Towers, previously

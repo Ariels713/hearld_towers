@@ -3,6 +3,9 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import MainHero from "../components/main-hero/MainHero"
 import MainSection from "../components/mainSection/MainSection"
+import ImageGallery from "../components/gallery/ImageGallery"
+import BodyCopy from "../components/bodyCopy/BodyCopy"
+import SecondaryHero from "../components/hero/SecondaryHero"
 
 export default function Home() {
   return (
@@ -13,7 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <MainHero />
-      <MainSection />
+      <MainSection bgColor="bg-gray-200" textColor="text-gray-900" />
+      <ImageGallery />
+      <BodyCopy />
+      <SecondaryHero />
     </div>
   )
 }
