@@ -48,7 +48,7 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Residences", href: "#" },
+    { name: "Residences", href: "/residences" },
     { name: "Neighborhood", href: "/neighborhood" },
     { name: "Availability", href: "/availability" },
   ],
