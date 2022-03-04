@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import availabilityImg from "../public/assets/availabilityImg.jpg"
 const orders = [
   {

@@ -49,7 +49,7 @@ const navigation = {
   ],
   pages: [
     { name: "Residences", href: "#" },
-    { name: "Neighborhood", href: "#" },
+    { name: "Neighborhood", href: "/neighborhood" },
     { name: "Availability", href: "/availability" },
   ],
 }
