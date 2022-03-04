@@ -154,8 +154,8 @@ function residences() {
           </div>
         </section>
       </div>
-      <MainSection />
-      <ImageGallery />
+      {/* <MainSection />
+      <ImageGallery /> */}
     </>
   )
 }
