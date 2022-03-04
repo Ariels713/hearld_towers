@@ -4,6 +4,8 @@ import hearld5 from "../public/assets/hearld5.jpg"
 import Link from "next/link"
 import MainSection from "../components/mainSection/MainSection"
 import herald12 from "../public/assets/herald12.jpg"
+import ImageGallery from "../components/gallery/ImageGallery"
+import { Main } from "next/document"
 const collections = [
   {
     name: "Beautiful Views",
@@ -152,6 +154,8 @@ function residences() {
           </div>
         </section>
       </div>
+      <MainSection />
+      <ImageGallery />
     </>
   )
 }
