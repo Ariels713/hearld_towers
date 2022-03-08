@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import hearld2 from "../../public/assets/hearld2.jpg"
-
+import Link from "next/link"
 function SecondaryHero() {
   return (
     <div className="relative bg-gray-900">
@@ -29,12 +29,11 @@ function SecondaryHero() {
           architecture, while full renovations snap apartments firmly into the
           now.
         </p>
-        <a
-          href="#"
-          className="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
-        >
-          View Availability
-        </a>
+        <Link href="/availability">
+          <a className="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100">
+            View Availability
+          </a>
+        </Link>
       </div>
     </div>
   )
