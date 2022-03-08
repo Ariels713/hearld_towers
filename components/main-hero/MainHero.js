@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import hearldMenu from "../../public/assets/hearldMenu.jpeg"
-
+import Link from "next/link"
 function MainHero() {
   return (
     <>
@@ -30,12 +30,11 @@ function MainHero() {
             accents of old classic grandeur with immaculate, innovative
             residences.
           </p>
-          <a
-            href="#"
-            className="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >
-            View Availability
-          </a>
+          <Link href="/availability">
+            <a className="mt-8 inline-block bg-white border border-transparent rounded-md py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100">
+              View Availability
+            </a>
+          </Link>
         </div>
       </div>
     </>
